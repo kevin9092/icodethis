@@ -1,0 +1,229 @@
+/* Add CSS here */
+:root {
+  --border-radius: 0.75rem;
+  --color-body: #F7FBFE;
+  --color-card: #FFFFFF;
+  --color-header: linear-gradient(90deg, rgba(117, 141, 203, 1) 0%, rgba(75, 112, 220, 1) 100%);
+  --font-family: 'Montserrat', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--color-body);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+span,
+label,
+textarea {
+  font-family: var(--font-family);
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.noselect {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.menu {
+  width: 15rem;
+  box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+}
+
+.menu__header {
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 150, 0.1));
+}
+
+.menu__profile {
+  align-items: center;
+  background: var(--color-header);
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+  border-bottom-left-radius: 1.75rem;
+  -webkit-clip-path: polygon(100% 0, 100% 75%, 30% 100%, 0 100%, 0 0);
+  clip-path: polygon(100% 0, 100% 75%, 15% 100%, 0 100%, 0 0);
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 2rem;
+  padding-inline: 1rem;
+  padding-top: 2rem;
+  gap: 1rem;
+}
+
+.menu__image {
+  border: 7px solid #708DD6;
+  border-radius: 50%;
+  height: 4rem;
+  object-fit: cover;
+  width: 4rem;
+}
+
+.menu__title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.menu__title p:first-of-type {
+  font-size: 0.75rem;
+  color: white;
+}
+
+.menu__title p:last-of-type {
+  font-size: 0.5rem;
+  color: #CADDFF;
+}
+
+.menu__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu__content button {
+  align-items: center;
+  background-color: #628DFF;
+  border: none;
+  border-radius: 0.25rem;
+  box-shadow: 0px 3px 5px -2px rgba(0, 0, 150, 0.2);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  font-family: "Montserrat";
+  gap: 0.5rem;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  transition: margin 150ms linear, box-shadow 150ms linear;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+@media (hover:hover) {
+  .menu__content button:hover {
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 150, 0.3);
+  }
+}
+
+.menu__content button[data-animate="bounce"] {
+  animation: bounce 150ms linear;
+}
+
+.menu__content button>svg {
+  height: 0.75rem;
+  fill: white;
+  pointer-events: none;
+}
+
+.menu__content button>p {
+  font-size: 0.75rem;
+  pointer-events: none;
+}
+
+.menu__list {
+  width: 100%;
+  list-style-type: none;
+  padding-block: 1.5rem;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.menu__item {
+  align-items: center;
+  border-left: 2px solid transparent;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  min-height: 2rem;
+}
+
+@media (hover:hover) {
+  .menu__item:hover {
+    border-left: 2px solid #2E72E8;
+  }
+
+  .menu__item:hover>svg {
+    fill: #2E72E8;
+  }
+
+  .menu__item:hover>p {
+    color: #2E72E8;
+  }
+}
+
+.menu__item>svg {
+  fill: #BDC0BF;
+  padding-left: 1rem;
+  width: 1.75rem;
+}
+
+.menu__item>p {
+  flex: 1;
+  font-size: 0.625rem;
+  font-weight: 400;
+}
+
+.menu__close {
+  bottom: 0.5rem;
+  cursor: pointer;
+  position: absolute;
+  right: 0.75rem;
+}
+
+.menu__close>svg {
+  fill: #BDC0BF;
+  height: 1.5rem;
+}
+
+
+@media (hover:hover) {
+  .menu__close:hover>svg {
+    fill: #2E72E8;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    Transform: scale(1);
+  }
+
+  50% {
+    Transform: scale(0.9);
+  }
+
+  100% {
+    Transform: scale(1);
+  }
+}
