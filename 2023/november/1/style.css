@@ -222,7 +222,7 @@ p {
 }
 
 .toast[data-state="show"] {
-  top: 3rem;
+  top: 1rem;
 }
 
 .toast>img {
