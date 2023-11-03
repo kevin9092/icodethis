@@ -283,7 +283,7 @@ p {
   font-weight: 400;
   padding: 1rem;
   width: 100%;
-  transition: margin-top 200ms linear;
+  transition: transform 200ms linear;
 }
 
 @media (min-width: 768px) {
@@ -294,12 +294,12 @@ p {
   @media (hover:hover) {
     .controls__button:first-of-type:hover {
       box-shadow: 0px 3px 10px 0px rgba(255, 113, 164, 0.5);
-      margin-top: -0.5rem;
+      transform: translateY(-0.5rem);
     }
 
     .controls__button:last-of-type:hover {
       box-shadow: 0px 3px 10px 0px rgba(18, 28, 81, 0.1);
-      margin-top: -0.5rem;
+      transform: translateY(-0.5rem);
     }
   }
 }

@@ -52,7 +52,7 @@ p {
 }
 
 .login {
-  max-width: 768px;
+  max-width: 900px;
   background: var(--color-edge);
   border-radius: 1.75rem;
   display: flex;
@@ -68,7 +68,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-block: 4rem;
+  padding: 4rem;
   width: 100%;
 }
 

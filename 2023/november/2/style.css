@@ -150,6 +150,14 @@ p {
   padding-inline: 0.25rem;
 }
 
+.likes>i:nth-child(2) {
+  transition: color 150ms linear;
+}
+
+.likes:hover>i:nth-child(2) {
+  color: #FF4081;
+}
+
 .likes[data-active="true"]>i:first-of-type {
   display: block;
   color: #FF4081;
