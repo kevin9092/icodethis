@@ -1,0 +1,165 @@
+/* Add CSS here */
+:root {
+  --border-radius: 0.75rem;
+  --color-body: #F9FBFE;
+  --color-card: #0C141B;
+  --color-font: #B7BBBE;
+  --font-family: 'Montserrat', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--color-body);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+span,
+label,
+textarea {
+  font-family: var(--font-family);
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.noselect {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.message {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 16px 16px 24px -8px rgba(0, 0, 0, 0.2);
+  width: 20rem;
+}
+
+.titlebar {
+  align-items: center;
+  background-color: #EC8E8E;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.25rem;
+}
+
+.content {
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.25rem;
+}
+
+.content>div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.content>div>label {
+  color: #8089A1;
+  font-size: 0.625rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.content>div>input {
+  border: 1.5px solid #E7EAF0;
+  border-radius: 0.25rem;
+  font-family: var(--font-family);
+  outline: none;
+  padding: 0.5rem;
+}
+
+.content>div>input::placeholder {
+  color: #79829C;
+  font-family: var(--font-family);
+}
+
+.content>div>textarea {
+  border: 1.5px solid #E7EAF0;
+  border-radius: 0.25rem;
+  font-family: var(--font-family);
+  height: 5rem;
+  outline: none;
+  padding: 0.5rem;
+  resize: none;
+}
+
+
+.content>div>textarea::placeholder {
+  color: #79829C;
+  font-family: var(--font-family);
+}
+
+.upload>button {
+  background-color: transparent;
+  border: 1.5px dashed #E7EAF0;
+  border-radius: 0.25rem;
+  color: #8089A1;
+  padding: 0.75rem 0;
+}
+
+.submit {
+  background-color: #EC8E8E;
+  border: none;
+  border-radius: 0.25rem;
+  box-shadow: 0px 8px 16px -8px rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 0.75rem 0;
+  margin-bottom: 2rem;
+}
+
+.submit[data-animate="bounce"] {
+  animation: bounce 150ms linear;
+}
+
+@keyframes bounce {
+  0% {
+    Transform: scale(1);
+  }
+
+  50% {
+    Transform: scale(0.9);
+  }
+
+  100% {
+    Transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
