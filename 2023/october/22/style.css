@@ -1,0 +1,154 @@
+/* Add CSS here */
+:root {
+  --border-radius: 0.75rem;
+  --color-body: #16191E;
+  --color-card: #222832;
+  --color-card-alt: #1C222C;
+  --color-submit: #FFFFFF;
+  --color-font: #FFFFFF;
+  --color-font-alt: #DDDEDF;
+  --color-blue: #03A9F3;
+  --color-purple: #AA00FF;
+  --color-red: #F40057;
+  --font-family: "Montserrat", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--color-body);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+span,
+label,
+textarea {
+  font-family: var(--font-family);
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.noselect {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.container {
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+@media (min-width:768px) {
+  .container {
+    grid-template-columns: repeat(1, minmax(20rem, 1fr));
+  }
+}
+
+@media (min-width:1140px) {
+  .container {
+    grid-template-columns: repeat(1, minmax(20rem, 1fr));
+  }
+}
+
+.card {
+  width: 30rem;
+  background-color: var(--color-card);
+  box-shadow: 0px 16px 24px -8px rgba(0, 0, 0, 0.4);
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.content {
+  align-items: center;
+  display: flex;
+  gap: 3rem;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.content>img {
+  width: 100%;
+  max-width: 5rem;
+}
+
+.message {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 18rem;
+}
+
+.submit {
+  align-items: center;
+  background-color: var(--color-submit);
+  border: none;
+  border-radius: 3rem;
+  outline: none;
+  color: black;
+  display: flex;
+  justify-content: center;
+  padding: 0.875rem 0;
+  transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
+  max-width: 12rem;
+  width: 100%;
+}
+
+.submit:hover {
+  color: black;
+}
+
+.submit>p {
+  text-transform: uppercase;
+  font-size: 0.5rem;
+  font-weight: 600;
+}
+
+.promotion {
+  background-color: var(--color-card-alt);
+  border-radius: 0.25rem;
+  color: var(--color-font-alt);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 20rem;
+}
+
+.promotion>h3 {
+  font-size: 1rem;
+}
+
+.promotion>p {
+  font-size: 0.75rem;
+}
